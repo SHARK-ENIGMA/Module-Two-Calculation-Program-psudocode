@@ -1,0 +1,80 @@
+// Author:   Kyle Scott
+// Date:     8.28.2024
+// Version:  1.0
+// Description:
+// To provide and calculate cubic feet from a particular refrigerator model, given inches and a model name.
+
+// initialize
+start
+
+// define Variables
+modelName = ""
+IN_model_height = 0
+IN_model_width = 0
+IN_model_depth = 0
+float CALC_model_in = 0.0
+float OUT_model_ft = 0.0
+INPUT_NOT_VALID = "Either you have a 4th dimensional fridge, or you have a brick that you claim is a fridge..."
+
+// run the program
+print "What is the model name of your refrigerator? :"
+input modelName
+
+// retrieve interior height, width, and depth in inches
+
+function inputModelHeight
+	print "What is the internal height of your fridge in inches? :"
+	input IN_model_height
+	if (IN_model_height <= 0) then
+		inputModelHeight()
+	else
+end
+
+function inputModelWidth
+	print "What is the internal width of your fridge in inches? :"
+	input IN_model_width
+	if (IN_model_width <= 0) then
+		inputModelWidth()
+	else
+end
+
+function inputModelDepth
+	print "What is the internap depth of your fridge in inches? :"
+	input IN_model_depth
+	if (IN_model_depth <= 0) then
+		inputModelDepth()
+	else
+end
+
+inputModelHeight()
+inputModelWidth()
+inputModelDepth()
+
+// calculate the cubic inches and feet.
+float CALC_model_in = IN_model_height * IN_model_width * IN_model_depth
+float OUT_model_ft = CALC_model_in / 1728
+print "Your refrigerator model name is " + modelName + "."
+print "Your refrigerator has a capacity of " + OUT_model_ft + "ft."
+
+// This is all just code I previously wrote, then chose to scrap.
+// if (IN_model_height > 0) then
+// 	inputModelWidth()
+// 	if (IN_model_width > 0) then
+// 		inputModelDepth
+// 		if (IN_model_depth > 0) then
+// 			
+//			// This is where we write the rest of the program.
+// 			
+// 			
+// 		else
+// 			print INPUT_NOT_VALID
+//			inputModelDepth()
+//	else
+// 		print INPUT_NOT_VALID
+// 		inputModelWidth()
+// else
+// 	print INPUT_NOT_VALID
+// 	inputModelHeight()
+
+// terminate the program
+stop

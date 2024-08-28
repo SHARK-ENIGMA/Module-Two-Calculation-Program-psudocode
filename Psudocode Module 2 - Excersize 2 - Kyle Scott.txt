@@ -1,0 +1,27 @@
+// Author:   Kyle Scott
+// Date:     8.28.2024
+// Version:  1.0
+
+// initialize
+start
+
+// define variables
+float accountBalance = 0.0
+overdrawAmount = 0
+float overdrawFee = .01
+float CALC_overdraw = (accountBalance * .01) + (overdrawAmount * 5)
+float OUT_overdraw = accountBalance - (accountBalance * overdrawFee) - (overdrawAmount * 5)
+
+// run the program
+print "What's your account balance? :"
+input accountBalance
+
+print "How many times was the account overdrawn? :"
+input overdrawAmount
+
+print "The amount charged was $" + CALC_overdraw + "."
+print "Your new account balance is $" + OUT_overdraw + "."
+print "Thank you for using this program!"
+
+// terminate the program
+stop
