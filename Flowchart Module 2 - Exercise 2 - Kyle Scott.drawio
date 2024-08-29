@@ -4,61 +4,142 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-1" value="start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="330" y="120" width="50" height="50" as="geometry" />
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-15" value="start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-3" value="float monthlyRent = 0.0" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="280" y="200" width="150" height="40" as="geometry" />
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-16" value="float accountBalance = 0.0" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="295" y="190" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-4" value="print &quot;Please input your monthly rent: &quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="180" y="270" width="350" height="40" as="geometry" />
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-17" value="overdrawAmount = 0" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="295" y="270" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-5" value="input monthlyRent" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="175" y="340" width="360" height="40" as="geometry" />
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-18" value="float overdrawFee = .01" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="295" y="350" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-6" value="float rentPerDay = monthlyRent / 30" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="180" y="410" width="350" height="40" as="geometry" />
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-19" target="BlbtDXyxYuwPCj3WOqXw-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-7" value="print &quot;Your daily rent for a 30-day month is $&quot; + rentPerDay + &quot;.&quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="95" y="480" width="520" height="40" as="geometry" />
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-19" value="float CALC_overdraw = (accountBalance * .01) + (overdrawAmount * 5)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="295" y="430" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-1" target="BlbtDXyxYuwPCj3WOqXw-3">
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-20" value="float OUT_overdraw = accountBalance - (accountBalance * overdrawFee) - (overdrawAmount * 5)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="292.5" y="510" width="205" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-15" target="BlbtDXyxYuwPCj3WOqXw-16">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="420" as="sourcePoint" />
             <mxPoint x="450" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-3" target="BlbtDXyxYuwPCj3WOqXw-4">
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-16" target="BlbtDXyxYuwPCj3WOqXw-17">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="420" as="sourcePoint" />
             <mxPoint x="450" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-4" target="BlbtDXyxYuwPCj3WOqXw-5">
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-17" target="BlbtDXyxYuwPCj3WOqXw-18">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="420" as="sourcePoint" />
             <mxPoint x="450" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-5" target="BlbtDXyxYuwPCj3WOqXw-6">
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-18" target="BlbtDXyxYuwPCj3WOqXw-19">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="420" as="sourcePoint" />
             <mxPoint x="450" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-6" target="BlbtDXyxYuwPCj3WOqXw-7">
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-28" target="BlbtDXyxYuwPCj3WOqXw-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-28" value="print &quot;What&#39;s your account balance? :&quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="190" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-29" value="input accountBalance" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="270" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-30" target="BlbtDXyxYuwPCj3WOqXw-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-30" value="print &quot;How many times was the account overdrawn? :&quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="340" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-31" target="BlbtDXyxYuwPCj3WOqXw-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-31" value="input overdrawAmount" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="420" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-32" target="BlbtDXyxYuwPCj3WOqXw-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-32" value="print &quot;The amount charged was $&quot; + CALC_overdraw + &quot;.&quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="500" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-33" target="BlbtDXyxYuwPCj3WOqXw-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-33" value="print &quot;Your new account balance is $&quot; + OUT_overdraw + &quot;.&quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="580" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-34" value="print &quot;Thank you for using this program!&quot;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="550" y="660" width="470" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-36" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-20">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="420" as="sourcePoint" />
-            <mxPoint x="450" y="370" as="targetPoint" />
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="530" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="395" y="590" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-13" value="stop" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="305" y="550" width="100" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="BlbtDXyxYuwPCj3WOqXw-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-7" target="BlbtDXyxYuwPCj3WOqXw-13">
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-37" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="420" as="sourcePoint" />
-            <mxPoint x="450" y="370" as="targetPoint" />
+            <mxPoint x="530" y="590" as="sourcePoint" />
+            <mxPoint x="530" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-39" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="BlbtDXyxYuwPCj3WOqXw-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="140" as="sourcePoint" />
+            <mxPoint x="670" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="785" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-29" target="BlbtDXyxYuwPCj3WOqXw-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="550" as="sourcePoint" />
+            <mxPoint x="670" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-46" value="stop" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="735" y="740" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-34" target="BlbtDXyxYuwPCj3WOqXw-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="620" as="sourcePoint" />
+            <mxPoint x="670" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-48" value="Define variables" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="160" y="165" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-49" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=80;exitDy=65;exitPerimeter=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="480" as="sourcePoint" />
+            <mxPoint x="290" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-50" value="Run the program" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="870" y="10" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BlbtDXyxYuwPCj3WOqXw-51" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="BlbtDXyxYuwPCj3WOqXw-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="310" as="sourcePoint" />
+            <mxPoint x="910" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
